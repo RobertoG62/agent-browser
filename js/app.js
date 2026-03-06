@@ -44,6 +44,14 @@ const hebrewToEnglish = {
   'מוזיקה': ['music', 'audio'],
   'תלת': ['3d', 'threejs'],
   'מימד': ['3d', 'threejs'],
+  'דיאגרמה': ['diagram', 'flowchart', 'excalidraw'],
+  'תרשים': ['diagram', 'flowchart', 'chart'],
+  'לינקדאין': ['linkedin', 'social-media'],
+  'דשבורד': ['dashboard', 'bi', 'visualization'],
+  'ניהול': ['management', 'business', 'product'],
+  'בינה': ['intelligence', 'bi', 'analytics'],
+  'עסקי': ['business', 'analyst', 'intelligence'],
+  'נתונים': ['data', 'analytics', 'visualization'],
 };
 
 // Hebrew stopwords to ignore during tokenization
@@ -192,7 +200,11 @@ function renderResults(results, shouldScroll = false) {
     const relevancePercent = queryWasEmpty ? 100 : Math.round((score / maxScore) * 100);
     const sourceBadge = skill.source === 'aviz'
       ? '<span class="badge-aviz">AVIZ</span>'
-      : '<span class="badge-skillssh">skills.sh</span>';
+      : skill.source === 'roberto'
+        ? '<span class="badge-roberto">ROBERTO</span>'
+        : skill.source === 'mamad-challenge'
+          ? '<span class="badge-mamad">MAMAD</span>'
+          : '<span class="badge-skillssh">skills.sh</span>';
     const installedBadge = skill.installed
       ? '<span class="badge-installed">מותקן</span>'
       : '';
@@ -310,6 +322,8 @@ function handleCategoryClick(category) {
     'education': 'לימוד קורס שיעור',
     'productivity': 'פרודוקטיביות יומן',
     'automation': 'אוטומציה דפדפן',
+    'data-science': 'נתונים דשבורד בינה עסקית',
+    'management': 'ניהול מוצר אנליסט עסקי',
   };
 
   const input = document.getElementById('searchInput');
