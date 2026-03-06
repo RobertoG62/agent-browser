@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Trigger GitHub Pages Build -->
   <title>Agent Browser - Skill Recommender</title>
 
   <!-- Tailwind CSS v4 CDN -->
@@ -31,10 +33,13 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="bg-charcoal font-heebo text-cream min-h-screen">
 
   <!-- Hero Section -->
@@ -53,16 +58,11 @@
 
       <!-- Search Area -->
       <div class="glass-card p-6 rounded-2xl">
-        <textarea
-          id="searchInput"
-          rows="3"
+        <textarea id="searchInput" rows="3"
           class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-cream placeholder-cream/40 text-lg resize-none focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/30 transition-all"
-          placeholder="תאר את הפרויקט שלך... / Describe your project..."
-        ></textarea>
-        <button
-          id="searchBtn"
-          class="mt-4 w-full bg-gold hover:bg-gold-light text-charcoal font-semibold text-lg py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.3)]"
-        >
+          placeholder="תאר את הפרויקט שלך... / Describe your project..."></textarea>
+        <button id="searchBtn"
+          class="mt-4 w-full bg-gold hover:bg-gold-light text-charcoal font-semibold text-lg py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.3)]">
           מצא סקילים
         </button>
       </div>
@@ -88,7 +88,7 @@
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
       <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
     </div>
   </section>
@@ -117,4 +117,5 @@
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
