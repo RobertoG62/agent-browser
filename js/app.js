@@ -224,7 +224,7 @@ function renderResults(results, shouldScroll = false) {
           <div class="flex items-start justify-between mb-3">
             <div>
               <h3 class="font-inter font-semibold text-lg text-cream">${skill.name}</h3>
-              <p class="text-cream/50 text-sm">${skill.nameHe || ''}</p>
+              <p class="text-cream/60 text-sm">${skill.nameHe || ''}</p>
             </div>
             <div class="flex gap-2 flex-shrink-0">
               ${sourceBadge}
@@ -252,7 +252,7 @@ function renderResults(results, shouldScroll = false) {
 
           ${actionBtn}
 
-          ${skill.installCount ? `<p class="text-cream/30 text-xs mt-2">${(skill.installCount).toLocaleString()} installs</p>` : ''}
+          ${skill.installCount ? `<p class="text-cream/60 text-xs mt-2">${(skill.installCount).toLocaleString()} installs</p>` : ''}
       `;
       fragment.appendChild(card);
     } catch (err) {

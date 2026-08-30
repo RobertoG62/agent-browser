@@ -8,34 +8,14 @@
   <title>Agent Browser - Skill Recommender</title>
 
   <!-- Tailwind CSS v4 CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: '#C9A84C',
-            'gold-light': '#E8D48B',
-            cream: '#FAFAFA',
-            charcoal: '#1A1A1A',
-            navy: '#0A1628',
-          },
-          fontFamily: {
-            heebo: ['Heebo', 'sans-serif'],
-            playfair: ['Playfair Display', 'serif'],
-            inter: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Built stylesheet in place of the Tailwind play CDN, a development
+       tool that fetched a script from a third party on every load.
+       The theme lives in twbuild/tw-agent-browser.js. -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <!-- Fonts served from this site. They used to load from Google, which handed
+       every visitor's IP address to a third party before the page had drawn. -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -98,21 +78,24 @@
   <!-- Results Section -->
   <section id="results" class="px-4 py-16 max-w-6xl mx-auto hidden">
     <h2 id="resultsTitle" class="font-playfair text-3xl text-center text-gold mb-2"></h2>
-    <p id="resultsSubtitle" class="text-center text-cream/50 mb-10"></p>
+    <p id="resultsSubtitle" class="text-center text-cream/60 mb-10"></p>
     <div id="resultsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </section>
 
   <!-- Empty State -->
   <section id="emptyState" class="px-4 py-16 max-w-2xl mx-auto text-center hidden">
-    <p class="text-cream/50 text-xl">לא נמצאו סקילים מתאימים. נסה לתאר את הפרויקט אחרת.</p>
+    <p class="text-cream/60 text-xl">לא נמצאו סקילים מתאימים. נסה לתאר את הפרויקט אחרת.</p>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-8 text-cream/30 text-sm border-t border-white/5">
+  <footer class="text-center py-8 text-cream/60 text-sm border-t border-white/5">
     <p>
       Powered by
-      <a href="https://skills.sh" target="_blank" class="text-gold/60 hover:text-gold transition-colors">skills.sh</a>
+      <a href="https://skills.sh" target="_blank" rel="noopener" class="text-gold underline hover:text-gold-light transition-colors">skills.sh</a>
       &bull; Built with Claude Code
+    </p>
+      <p class="policy-links">
+      <a href="privacy.html">מדיניות פרטיות</a> · <a href="terms.html">תנאי שימוש</a> · <a href="accessibility.html">הצהרת נגישות</a>
     </p>
   </footer>
 

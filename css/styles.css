@@ -111,7 +111,8 @@
   padding: 0.15rem 0.5rem;
   border-radius: 0.375rem;
   font-size: 0.7rem;
-  color: rgba(250, 250, 250, 0.45);
+  /* was 0.45 alpha, which resolved to 3.93:1 on the tag background */
+  color: rgba(250, 250, 250, 0.62);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -207,3 +208,7 @@
 textarea:focus {
   box-shadow: 0 0 20px rgba(201, 168, 76, 0.1);
 }
+
+/* policy links — gold at full strength, not the 60% used decoratively */
+.policy-links { margin-top: 14px; font-size: 0.85rem; line-height: 1.9; text-align: center; }
+.policy-links a { color: #E8D48B; text-decoration: underline; }
